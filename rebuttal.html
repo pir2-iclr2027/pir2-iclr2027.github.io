@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&pi;R&sup2;: Rebuttal Materials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="static/favicon_hand.svg?v=3" type="image/svg+xml">
+<link rel="stylesheet" href="static/css/site.css">
+<style>
+  .rbtoc{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+  .rbtoc a{display:flex;flex-direction:column;gap:3px;text-decoration:none;min-width:170px;
+    padding:12px 18px;border:1px solid var(--line2);border-radius:11px;background:#fff;
+    transition:border-color .15s,box-shadow .15s,transform .15s}
+  .rbtoc a:hover{border-color:var(--accent);box-shadow:0 4px 14px rgba(16,24,40,.09);transform:translateY(-1px)}
+  .rbtoc .n{font-family:var(--mono);font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--accent-d)}
+  .rbtoc .t{font-size:15.5px;font-weight:650;color:var(--ink);line-height:1.25}
+  .rbhead{text-align:center;margin-bottom:26px}
+  .rbhead h2{display:inline-block;border-bottom:2px solid var(--accent);padding-bottom:12px;margin-bottom:0}
+  .rtag{display:inline-block;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.06em;
+    color:var(--accent-d);background:var(--accent-soft);border-radius:999px;padding:4px 12px;margin-bottom:12px}
+  .rbdesc{color:var(--dim);font-size:16.5px;line-height:1.65;max-width:820px;margin:0 auto}
+  .rbcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-top:22px}
+  .rbcard h4{font-size:16px;font-weight:650;margin:0 0 4px;color:var(--ink)}
+  .rbnote{font-size:14px;color:var(--dim);margin-top:14px;line-height:1.6}
+  .tblscroll{overflow-x:auto}
+  /* LaTeX booktabs: horizontal rules only */
+  table.ltx{width:100%;border-collapse:collapse;background:none;border:none;
+    font-size:14.5px;font-variant-numeric:tabular-nums}
+  table.ltx th,table.ltx td{border:none;padding:8px 14px;text-align:center;background:none}
+  table.ltx thead th{border-top:1.1px solid var(--ink);border-bottom:0.6px solid var(--ink);
+    font-weight:650;color:var(--ink);font-size:14px;padding-bottom:9px}
+  table.ltx tbody tr:last-child td{border-bottom:1.1px solid var(--ink)}
+  table.ltx td:first-child,table.ltx th:first-child{text-align:left;padding-left:2px}
+  table.ltx tr.rule td{border-top:0.6px solid var(--ink);padding:0;height:0;font-size:0}
+  table.ltx tr.ours td{font-weight:650}
+  table.ltx tr.ours td:first-child{color:var(--accent-d)}
+  /* R2 carousel */
+  .r2stage{display:flex;align-items:center;gap:12px;margin-top:6px}
+  .r2nav{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:1px solid var(--line2);
+    background:#fff;color:var(--ink);font-size:26px;line-height:1;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:all .15s}
+  .r2nav:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-d)}
+  .r2title{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--ink);margin:14px 0 10px}
+  .r2count{color:var(--dim);font-weight:500;margin-left:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+  .chip{display:flex;flex-direction:column;gap:3px;min-width:92px;padding:9px 13px;border-radius:9px;
+    background:var(--bg-alt);border:1px solid var(--line);white-space:nowrap}
+  .chip .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+    color:var(--dim);font-weight:700}
+  .chip .v{font-size:18px;font-weight:700;color:var(--ink);line-height:1.1}
+  .chip.hot{background:#fff1f0;border-color:#e8a49c}
+  .chip.hot .k{color:#a85048}
+  .chip.hot .v{color:#9c2a20}
+  .chip.ok{background:var(--accent-soft);border-color:var(--accent);justify-content:center}
+  .chip.ok .v{color:var(--accent-d);font-size:16px}
+  @media(max-width:700px){.r2nav{width:34px;height:34px;font-size:20px}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html">&pi;<b>R²</b></a>
+  <span class="links"><a href="index.html">&larr; Main page</a></span>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <h1 class="title" style="font-size:clamp(32px,4.6vw,48px)"><span class="pi">π</span><b>R²</b>: Rebuttal Materials</h1>
+  <p class="affil" style="font-style:italic">Anonymous submission &middot; under double-blind review &middot; ICLR 2027</p>
+  <div class="cta"><a class="btn" href="index.html">&larr; Back to project page</a></div>
+  <nav class="rbtoc" aria-label="Rebuttal sections">
+    <a href="#r1"><span class="n">R1</span><span class="t">Kinetix benchmark</span></a>
+    <a href="#r2"><span class="n">R2</span><span class="t">Delay variation on the robot</span></a>
+    <a href="#r3"><span class="n">R3</span><span class="t">Measured latency</span></a>
+    <a href="#r4"><span class="n">R4</span><span class="t">Latency accounting</span></a>
+  </nav>
+</div></header>
+
+<section id="r1"><div class="wrap">
+  <div class="rbhead">
+    <div><span class="rtag">R1 &middot; reviewers G5jF, HPaC</span></div>
+    <h2>Kinetix: dynamic tasks under VLA-level delay</h2>
+  </div>
+  <p class="rbdesc">The 6 Kinetix levels whose state includes objects beyond proprioception, which we treat as the slow channel. <i>H</i>&nbsp;=&nbsp;8, 2,048 rollouts per level, 3 seeds.</p>
+  <div class="rbcard"><div class="tblscroll">
+    <table class="ltx">
+      <thead><tr><th>Method</th><th>d&#8320; = 1</th><th>d&#8320; = 2</th><th>d&#8320; = 3</th><th>d&#8320; = 4</th></tr></thead>
+      <tbody>
+        <tr><td>Standard Flow (async)</td><td>0.655 ± 0.000</td><td>0.569 ± 0.001</td><td>–</td><td>–</td></tr>
+        <tr><td>RTC</td><td><b>0.838 ± 0.000</b></td><td>0.690 ± 0.003</td><td>–</td><td>–</td></tr>
+        <tr><td>Train-time RTC</td><td><b>0.852 ± 0.017</b></td><td>0.794 ± 0.006</td><td>–</td><td>–</td></tr>
+        <tr><td>FASTER</td><td><b>0.826 ± 0.073</b></td><td>0.763 ± 0.041</td><td>–</td><td>–</td></tr>
+        <tr><td>SDP</td><td>0.180 ± 0.010</td><td>0.153 ± 0.024</td><td>0.088 ± 0.003</td><td>0.091 ± 0.001</td></tr>
+        <tr class="rule"><td colspan="5"></td></tr>
+        <tr class='ours'><td>&pi;R&sup2; (ours)</td><td><b>0.819 ± 0.004</b></td><td><b>0.804 ± 0.006</b></td><td><b>0.769 ± 0.008</b></td><td><b>0.769 ± 0.008</b></td></tr>
+        <tr class="rule"><td colspan="5"></td></tr>
+        <tr><td>&pi;R&sup2; w/o async slow channel</td><td><b>0.822 ± 0.004</b></td><td><b>0.807 ± 0.010</b></td><td>0.744 ± 0.029</td><td>0.646 ± 0.017</td></tr>
+        <tr><td>&pi;R&sup2; w/o staircase (= RTC + async VLM)</td><td><b>0.812 ± 0.017</b></td><td>0.776 ± 0.021</td><td>0.707 ± 0.027</td><td>0.642 ± 0.059</td></tr>
+        <tr><td>&pi;R&sup2; w/o latency-adaptive</td><td>0.210 ± 0.031</td><td>0.190 ± 0.035</td><td>0.197 ± 0.030</td><td>0.197 ± 0.030</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+  <p class="rbnote">Each method is charged its own deployment delay (R4); &ldquo;&ndash;&rdquo; means that delay no longer fits the chunk (<i>H</i>/2&nbsp;=&nbsp;4). &pi;R&sup2; and its ablations receive the measured cache age d<sub>vis</sub> through the delay embedding, as on the robot; the baselines have no cache. <b>Bold</b>: methods at or above 0.80, i.e. comparable at that delay; where none reaches it, the best.</p>
+</div></section>
+
+<section id="r2" class="alt"><div class="wrap">
+  <div class="rbhead">
+    <div><span class="rtag">R2 &middot; reviewers HPaC, eSo2</span></div>
+    <h2>Both conditioning delays vary, and &pi;R&sup2; handles it</h2>
+  </div>
+  
+
+  <div class="rbcard">
+    <div class="seg" id="r2-tasks" style="margin-bottom:16px"></div>
+    <div class="r2stage">
+      <button class="r2nav prev" id="r2-prev" aria-label="Previous rollout">&lsaquo;</button>
+      <div class="vidwrap" style="aspect-ratio:2130/750;flex:1">
+        <video id="r2-video" controls muted loop playsinline preload="metadata"></video>
+      </div>
+      <button class="r2nav next" id="r2-next" aria-label="Next rollout">&rsaquo;</button>
+    </div>
+    <p class="rbnote" style="margin-top:12px;text-align:center">Left: overhead camera.
+    Right: <b>d</b>, the policy call interval, and <b>d<sub>vis</sub></b>, the age of the cached
+    VLM embedding &mdash; both re-measured every call. Dashed line: the 5-tick training range.</p>
+    <div class="r2title"><span id="r2-task"></span> &middot; <span id="r2-ep"></span>
+      <span class="r2count" id="r2-count"></span></div>
+    <div class="chips" id="r2-chips"></div>
+  </div>
+
+  <p class="rbnote">d<sub>vis</sub> varies continuously around a median of ~2.5 ticks; in five of the twelve rollouts it leaves the 5-tick training range, peaking at 13.9 ticks (2.8&times; the range) in one. The call interval holds within &plusmn;10% on 93&ndash;100% of calls and spikes to at most 7.0 ticks when a chunk arrives late. All twelve rollouts succeed.</p>
+</div></section>
+
+<section id="r3"><div class="wrap">
+  <div class="rbhead">
+    <div><span class="rtag">R3 &middot; reviewers G5jF, eSo2</span></div>
+    <h2>Measured latency and staleness on the robot</h2>
+  </div>
+  <p class="rbdesc">Measured on the robot&rsquo;s compute, 1 tick = 40&nbsp;ms. &pi;R&sup2; on one GPU still beats every RTC configuration, including RTC with an asynchronous VLM on two.</p>
+  <div class="rbcard"><div class="tblscroll">
+    <table class="ltx">
+      <thead><tr><th>Method</th><th>GPUs</th><th>VLM</th><th>Policy latency <i>d</i></th>
+      <th>VLM latency d<sub>vlm</sub></th><th>Cache age d<sub>vis</sub></th>
+      <th>Proprio staleness s<sub>pro</sub></th><th>VLM staleness s<sub>vis</sub></th>
+      <th>s<sub>vis</sub> &gt; 5 ticks</th></tr></thead>
+      <tbody>
+        <tr class='ours'><td>&pi;R&sup2;</td><td>2</td><td>async</td><td><b>31.5 ms</b> (0.79)</td><td>60.8 ms (1.52)</td><td>94 ms (2.36)</td><td><b>48 ms</b> (1.21)</td><td><b>141 ms</b> (3.52)</td><td><b>0.0%</b></td></tr>
+        <tr class='ours'><td>&pi;R&sup2;</td><td>1</td><td>async</td><td>69.3 ms (1.73)</td><td>69.4 ms (1.73)</td><td>88 ms (2.21)</td><td>104 ms (2.61)</td><td>194 ms (4.85)</td><td>40.5%</td></tr>
+        <tr class="rule"><td colspan="9"></td></tr>
+        <tr><td>Train-time RTC</td><td>1</td><td>sync</td><td>133.3 ms (3.33)</td><td>&ndash;</td><td>&ndash;</td><td>203 ms (5.08)</td><td>203 ms (5.08)</td><td>50.8%</td></tr>
+        <tr><td>Train-time RTC</td><td>2</td><td>async</td><td>94.4 ms (2.36)</td><td>59.8 ms (1.49)</td><td>96 ms (2.40)</td><td>142 ms (3.55)</td><td>235 ms (5.87)</td><td>83.8%</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+  <p class="rbnote">Ticks in parentheses. Staleness is the median over executed control ticks and counts each action&rsquo;s offset in its chunk. &ldquo;&ndash;&rdquo;: already included in <i>d</i>.</p>
+</div></section>
+
+<section id="r4" class="alt"><div class="wrap">
+  <div class="rbhead">
+    <div><span class="rtag">R4 &middot; reviewer eSo2</span></div>
+    <h2>What delay each method is charged in simulation</h2>
+  </div>
+  <p class="rbdesc">In simulation the policy latency and cache age are set by a fixed cost
+  model from GR00T-N1.7 &mdash; VLM latency d<sub>vlm</sub>&nbsp;=&nbsp;0.75d&#8320; and
+  denoising-step latency d<sub>dn</sub>&nbsp;=&nbsp;0.25d&#8320;, where the unit delay d&#8320; is
+  the cost of GR00T&rsquo;s default 4 denoising steps &mdash; not by how many denoising steps the
+  simulation network runs. Flow and RTC run 15 steps on Leap Cube and up to 5 on Kinetix for
+  quality, but are charged only GR00T&rsquo;s 4, which favors them. A method is excluded at a given
+  d&#8320; when its charged policy latency exceeds <i>H</i>/2 (<i>H</i>&nbsp;=&nbsp;16 on Leap Cube,
+  <i>H</i>&nbsp;=&nbsp;8 on Kinetix), as it then no longer allows continuous real-time execution.</p>
+
+  <div class="rbcard">
+    <h4>Leap Cube &middot; <i>H</i> = 16 &middot; d&#8320; &isin; {1, 2, 3, 5}</h4>
+    <div class="tblscroll">
+    <table class="ltx">
+      <thead><tr><th>Method</th><th>Charged policy latency <i>d</i></th><th><i>d</i></th><th>d<sub>vis</sub></th></tr></thead>
+      <tbody>
+        <tr><td>Standard Flow, RTC, Train-time RTC</td><td>d<sub>vlm</sub> + 4d<sub>dn</sub> = &lceil;1.75d&#8320;&rceil;</td><td>2 / 4 / 6 / &ndash;</td><td>&ndash;</td></tr>
+        <tr><td>FASTER</td><td>&lceil;0.75d&#8320; + (n(d)/K)&middot;d&#8320;&rceil;</td><td>1 / 3 / 4 / &ndash;</td><td>&ndash;</td></tr>
+        <tr><td>SDP</td><td>&lceil;d&#8320;&rceil;, stalls</td><td>1 / 2 / 3 / 5</td><td>&ndash;</td></tr>
+        <tr class="rule"><td colspan="4"></td></tr>
+        <tr class='ours'><td>&pi;R&sup2;</td><td>1&middot;d<sub>dn</sub> = &lceil;0.25d&#8320;&rceil;</td><td>1 / 1 / 1 / 2</td><td>1 / 2 / 3 / 4</td></tr>
+        <tr><td>&pi;R&sup2; w/o async</td><td>d<sub>vlm</sub> + 1&middot;d<sub>dn</sub> = &lceil;1.0d&#8320;&rceil;</td><td>1 / 2 / 3 / 5</td><td>&ndash;</td></tr>
+        <tr><td>&pi;R&sup2; w/o staircase</td><td>4&middot;d<sub>dn</sub> = &lceil;1.0d&#8320;&rceil;</td><td>1 / 2 / 3 / 5</td><td>1 / 2 / 3 / 4</td></tr>
+        <tr><td>&pi;R&sup2; w/o latency-adaptive</td><td>&lceil;0.25d&#8320;&rceil;, stalls</td><td>1 / 1 / 1 / 2</td><td>1 / 2 / 3 / 4</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="rbcard">
+    <h4>Kinetix &middot; <i>H</i> = 8 &middot; d&#8320; &isin; {1, 2, 3, 4}</h4>
+    <div class="tblscroll">
+    <table class="ltx">
+      <thead><tr><th>Method</th><th>Charged policy latency <i>d</i></th><th><i>d</i></th><th>d<sub>vis</sub></th></tr></thead>
+      <tbody>
+        <tr><td>Standard Flow, RTC, Train-time RTC</td><td>d<sub>vlm</sub> + 4d<sub>dn</sub> = &lceil;1.75d&#8320;&rceil;</td><td>2 / 4 / &ndash; / &ndash;</td><td>&ndash;</td></tr>
+        <tr><td>FASTER</td><td>&lceil;0.75d&#8320; + (n(d)/K)&middot;d&#8320;&rceil;</td><td>1 / 4 / &ndash; / &ndash;</td><td>&ndash;</td></tr>
+        <tr><td>SDP</td><td>&lceil;d&#8320;&rceil;, stalls</td><td>1 / 2 / 3 / 4</td><td>&ndash;</td></tr>
+        <tr class="rule"><td colspan="4"></td></tr>
+        <tr class='ours'><td>&pi;R&sup2;</td><td>1&middot;d<sub>dn</sub> = &lceil;0.25d&#8320;&rceil;</td><td>1 / 1 / 1 / 1</td><td>1 / 2 / 3 / 3</td></tr>
+        <tr><td>&pi;R&sup2; w/o async</td><td>d<sub>vlm</sub> + 1&middot;d<sub>dn</sub> = &lceil;1.0d&#8320;&rceil;</td><td>1 / 2 / 3 / 4</td><td>&ndash;</td></tr>
+        <tr><td>&pi;R&sup2; w/o staircase</td><td>4&middot;d<sub>dn</sub> = &lceil;1.0d&#8320;&rceil;</td><td>1 / 2 / 3 / 4</td><td>1 / 2 / 3 / 3</td></tr>
+        <tr><td>&pi;R&sup2; w/o latency-adaptive</td><td>&lceil;0.25d&#8320;&rceil;, stalls</td><td>1 / 1 / 1 / 1</td><td>1 / 2 / 3 / 3</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <p class="rbnote">All values in control ticks. &ldquo;&ndash;&rdquo; in <i>d</i> means the
+  charged latency exceeds <i>H</i>/2, so the schedule cannot fit a clean prefix and a noise tail of
+  length <i>d</i> inside the chunk; in d<sub>vis</sub> it means the VLM latency is already inside
+  <i>d</i>. For FASTER, n(d) is the ready-step of the last position it emits under its own schedule
+  (&alpha;&nbsp;=&nbsp;0.6, u&#8320;&nbsp;=&nbsp;0.9), with K&nbsp;=&nbsp;15 steps on Leap Cube and
+  K&nbsp;=&nbsp;5 on Kinetix; because the schedule depends on the delay, <i>d</i> is the smallest
+  self-consistent solution. &pi;R&sup2;&rsquo;s cache age is charged as
+  d<sub>vis</sub>&nbsp;=&nbsp;&lceil;0.75d&#8320;&rceil;, the lower end of its real-world range.</p>
+</div></section>
+
+<section class="center" style="padding:44px 0"><div class="wrap">
+  <a class="btn primary" href="index.html">&larr; Back to project page</a>
+</div></section>
+
+<footer><div class="wrap">&pi;<b>R²</b> &middot; Anonymous submission &middot; ICLR 2027</div></footer>
+
+<script>
+(function () {
+  var EP = [
+    {t:"Catch Book",    s:"catch", n:"0017", d:1, pct:"97.0%",  maxd:"1.07 tk", dv:"2.54", maxdv:"13.9", over:20, holds:0},
+    {t:"Catch Book",    s:"catch", n:"0005", d:1, pct:"94.3%",  maxd:"1.39 tk", dv:"2.44", maxdv:"8.0",  over:5,  holds:3},
+    {t:"Catch Book",    s:"catch", n:"0012", d:1, pct:"92.7%",  maxd:"5.99 tk", dv:"2.54", maxdv:"3.6",  over:0,  holds:5},
+    {t:"Ball in Bowl",  s:"ball",  n:"0000", d:1, pct:"99.2%",  maxd:"2.03 tk", dv:"2.61", maxdv:"8.4",  over:5,  holds:1},
+    {t:"Ball in Bowl",  s:"ball",  n:"0003", d:1, pct:"99.5%",  maxd:"2.42 tk", dv:"2.59", maxdv:"4.3",  over:0,  holds:2},
+    {t:"Ball in Bowl",  s:"ball",  n:"0009", d:1, pct:"97.4%",  maxd:"1.68 tk", dv:"2.75", maxdv:"4.3",  over:0,  holds:1},
+    {t:"Box in Basket", s:"box",   n:"0004", d:1, pct:"97.7%",  maxd:"1.25 tk", dv:"2.43", maxdv:"7.5",  over:4,  holds:1},
+    {t:"Box in Basket", s:"box",   n:"0002", d:2, pct:"96.8%",  maxd:"6.95 tk", dv:"2.06", maxdv:"7.0",  over:1,  holds:17},
+    {t:"Box in Basket", s:"box",   n:"0000", d:2, pct:"94.5%",  maxd:"3.03 tk", dv:"2.11", maxdv:"4.0",  over:0,  holds:17},
+    {t:"Books in Basket", s:"books", n:"0001", d:2, pct:"100.0%", maxd:"2.06 tk", dv:"2.1",  maxdv:"3.7", over:0, holds:0},
+    {t:"Books in Basket", s:"books", n:"0002", d:2, pct:"98.9%",  maxd:"3.01 tk", dv:"2.39", maxdv:"3.5", over:0, holds:2},
+    {t:"Books in Basket", s:"books", n:"0000", d:2, pct:"96.1%",  maxd:"3.02 tk", dv:"2.06", maxdv:"3.1", over:0, holds:9}
+  ];
+  var TASKS = ["Catch Book","Ball in Bowl","Box in Basket","Books in Basket"];
+  var task = TASKS[0], idx = 0;
+  var segEl=document.getElementById("r2-tasks"), vid=document.getElementById("r2-video"),
+      chips=document.getElementById("r2-chips");
+
+  TASKS.forEach(function (t) {
+    var b=document.createElement("button");
+    b.className="segbtn"; b.textContent=t;
+    b.onclick=function(){ task=t; idx=0; render(); };
+    segEl.appendChild(b);
+  });
+  function list(){ return EP.filter(function(e){ return e.t===task; }); }
+  function chip(k,v,hot){
+    return '<span class="chip'+(hot?' hot':'')+'"><span class="k">'+k+'</span>'+
+           '<span class="v">'+v+'</span></span>';
+  }
+  function render(){
+    var L=list(), e=L[idx];
+    Array.prototype.forEach.call(segEl.children,function(b){
+      b.classList.toggle("active", b.textContent===task); });
+    vid.poster="static/rebuttal/r2/"+e.s+"_ep"+e.n+".jpg";
+    vid.src="static/rebuttal/r2/"+e.s+"_ep"+e.n+".mp4";
+    document.getElementById("r2-task").textContent=e.t;
+    document.getElementById("r2-ep").textContent="episode "+e.n;
+    document.getElementById("r2-count").textContent=(idx+1)+" / "+L.length;
+    chips.innerHTML =
+      chip("policy latency d", e.d+" tick"+(e.d>1?"s":"")) +
+      chip("calls within &plusmn;10%", e.pct) +
+      chip("max d", e.maxd, parseFloat(e.maxd)>4) +
+      chip("median d<sub>vis</sub>", e.dv+" tk") +
+      chip("max d<sub>vis</sub>", e.maxdv+" tk", parseFloat(e.maxdv)>5) +
+      chip("calls d<sub>vis</sub> &gt; 5", e.over, e.over>0) +
+      chip("holds", e.holds) +
+      '<span class="chip ok"><span class="v">&#10003; success</span></span>';
+  }
+  document.getElementById("r2-prev").onclick=function(){
+    var L=list(); idx=(idx-1+L.length)%L.length; render(); };
+  document.getElementById("r2-next").onclick=function(){
+    var L=list(); idx=(idx+1)%L.length; render(); };
+  render();
+})();
+</script>
+</body>
+</html>
